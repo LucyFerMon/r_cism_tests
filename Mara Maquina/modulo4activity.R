@@ -14,16 +14,28 @@ df <- gapminder
 #######################################
 dim(df)
 dim(gapminder)[1]
+
+#--------------------------------------
+# COMENTARIO DE LUCIA: PERFECT
+#--------------------------------------
 #######################################
 # 2. How many columns are in df?
 #######################################
 dim(df)
 dim(gapminder)[2]
+
+#--------------------------------------
+# COMENTARIO DE LUCIA: PERFECT
+#--------------------------------------
 #######################################
 # 3. What are the column names of df?
 #######################################
 head(gapminder)
 names(df)
+
+#--------------------------------------
+# COMENTARIO DE LUCIA: You don't need head(), names is sufficient
+#--------------------------------------
 #######################################
 # 4. What are the different countries in df?
 #######################################
@@ -31,6 +43,9 @@ names(df)
 
 unique(df$country)
 
+#--------------------------------------
+# COMENTARIO DE LUCIA: Perfect
+#--------------------------------------
 #######################################
 # 5. Create in object called df2007.
 #    This should be all the observations for which
@@ -39,7 +54,9 @@ unique(df$country)
 # (Hint: use the subset() function)
 df2007 <- subset(df, df$year=="2007",)
 
-
+#--------------------------------------
+# COMENTARIO DE LUCIA: you should remove the last comma
+#--------------------------------------
 
 #######################################
 # 6. What was the population of Mozambique in 2007?
@@ -47,16 +64,30 @@ df2007 <- subset(df, df$year=="2007",)
 # (Hint: use the subset() function and the df2007 object)
 dfmoz2007 <- subset(df, df$year=="2007" & df$country=="Mozambique",)
 
+#--------------------------------------
+# COMENTARIO DE LUCIA: you should remove the last comma
+#--------------------------------------
+
 #######################################
 # 7. What was the maximum life expectancy of any country in 2007?
 #######################################
 # (Hint: use the max() function and the df2007 object)
 max(df2007$lifeExp)
+
+#--------------------------------------
+# COMENTARIO DE LUCIA: perfect
+#--------------------------------------
+
 #######################################
 # 8. What was the average life expectancy of all countries in 2007?
 #######################################
 # (Hint: use the mean() function and the df2007 object)
 mean(df2007$lifeExp)
+
+#--------------------------------------
+# COMENTARIO DE LUCIA: perfect
+#--------------------------------------
+
 #######################################
 # 9. Create a histogram of the populations of all countries
 #    in 2007.
@@ -64,6 +95,11 @@ mean(df2007$lifeExp)
 
 hist(df2007$pop)
 hist()
+
+#--------------------------------------
+# COMENTARIO DE LUCIA: the hist() will not create anything as it is empy
+#--------------------------------------
+
 #######################################
 # 10. Create a plot of the relationship between 
 #     life expectancy and GDP per capita
@@ -71,6 +107,11 @@ hist()
 #######################################
 
 plot(df2007$lifeExp, df2007$gdpPercap)
+
+#--------------------------------------
+# COMENTARIO DE LUCIA: perfect
+#--------------------------------------
+
 #######################################
 # 11. Create an object called moz.
 #     This will be only those observations for
@@ -80,12 +121,21 @@ plot(df2007$lifeExp, df2007$gdpPercap)
 
 moz <- subset(df, df$country=="Mozambique",)
 
+#--------------------------------------
+# COMENTARIO DE LUCIA: perfect
+#--------------------------------------
+
 #######################################
 # 12. Make a plot of the year and the life expectancy of Mozambique
 #     (x axis = year, y axis = life expectancy)
 #######################################
 # (Hint: use the moz object)
 plot(moz$year, moz$lifeExp , xlab = 'Year', ylab = 'LifeExp')
+
+#--------------------------------------
+# COMENTARIO DE LUCIA: perfect
+#--------------------------------------
+
 #######################################
 # 13. Do the same as number 12, but add
 #     a type = 'l' argument to make it a line chart
@@ -96,10 +146,19 @@ plot(moz$year, moz$lifeExp , xlab = 'Year', ylab = 'LifeExp')
 
 plot(moz$year, moz$lifeExp , xlab = 'Year', ylab = 'LifeExp', type = "h")
 
+#--------------------------------------
+# COMENTARIO DE LUCIA: the line should be of type="l" not type="h
+#--------------------------------------
+
+
 #######################################
 # 14. Make a plot of the year and population of Mozambique
 #######################################
 plot(moz$year, moz$pop,xlab = 'Year', ylab = 'pop')
+
+#--------------------------------------
+# COMENTARIO DE LUCIA: perfect
+#--------------------------------------
 
 
 #######################################
