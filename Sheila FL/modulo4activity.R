@@ -8,22 +8,36 @@ library(gapminder)
 # gapminder package to get data about countries over time
 df <- gapminder
 
+#-----------------
+# COMENTARIO DE LUCIA:  perfect
+#-----------------
 
 #######################################
 # 1. How many rows are in df?
 #######################################
 dim (gapminder) 1704
 
+#-----------------
+# COMENTARIO DE LUCIA:  perfect
+#-----------------
+
 #######################################
 # 2. How many columns are in df?
 #######################################
 6
+#-----------------
+# COMENTARIO DE LUCIA:  perfect
+#-----------------
 
 #######################################
 # 3. What are the column names of df?
 #######################################
 head(gapminder)
 country continent year lifeExp      pop gdpPercap
+
+#-----------------
+# COMENTARIO DE LUCIA:  perfect
+#-----------------
 
 #######################################
 # 4. What are the different countries in df?
@@ -104,6 +118,9 @@ unique(gapminder$country)
 [139] West Bank and Gaza       Yemen, Rep.             
 [141] Zambia     
 
+#-----------------
+# COMENTARIO DE LUCIA:  perfect
+#-----------------
 
 
 #######################################
@@ -114,8 +131,15 @@ unique(gapminder$country)
 # (Hint: use the subset() function)#
 
 gapminder,YEAR=="2007")
+
+#-----------------
+# COMENTARIO DE LUCIA: what's the meaning of the line above?
+#-----------------
 df2007<- subset(df,year=="2007")
 
+#-----------------
+# COMENTARIO DE LUCIA:  perfect
+#-----------------
 
 
 #######################################
@@ -127,6 +151,11 @@ subset
 subset(df2007,country=="Mozambique")
 19951656
 
+#-----------------
+# COMENTARIO DE LUCIA:  you can do subset(df2007,country=="Mozambique",pop) 
+# and the you only get the population data
+#-----------------
+
 #######################################
 # 7. What was the maximum life expectancy of any country in 2007?
 #######################################
@@ -134,6 +163,11 @@ subset(df2007,country=="Mozambique")
 
 max(df2007$lifeExp)
 82.603
+
+#-----------------
+# COMENTARIO DE LUCIA:  perfect
+#-----------------
+
 
 #######################################
 # 8. What was the average life expectancy of all countries in 2007?
@@ -143,12 +177,20 @@ max(df2007$lifeExp)
 mean(df2007$lifeExp)
 67.00742
 
+#-----------------
+# COMENTARIO DE LUCIA:  perfect
+#-----------------
+
 #######################################
 # 9. Create a histogram of the populations of all countries
 #    in 2007.
 #######################################
 
 hist(df2007$pop)
+
+#-----------------
+# COMENTARIO DE LUCIA:  perfect
+#-----------------
 
 #######################################
 # 10. Create a plot of the relationship between 
@@ -158,6 +200,10 @@ hist(df2007$pop)
 
 plot(df2007$lifeExp,df2007$dfgdpPercap)
 
+#-----------------
+# COMENTARIO DE LUCIA:  perfect
+#-----------------
+
 #######################################
 # 11. Create an object called moz.
 #     This will be only those observations for
@@ -165,6 +211,9 @@ plot(df2007$lifeExp,df2007$dfgdpPercap)
 #######################################
 moz<-subset(df,country=="Mozambique")
 
+#-----------------
+# COMENTARIO DE LUCIA:  perfect
+#-----------------
 
 #######################################
 # 12. Make a plot of the year and the life expectancy of Mozambique
@@ -172,6 +221,11 @@ moz<-subset(df,country=="Mozambique")
 #######################################
 # (Hint: use the moz object)
 plot(moz$year, moz$lifeExp)
+
+#-----------------
+# COMENTARIO DE LUCIA:  perfect, but try to always give three 
+## elements to the graph: title, x-axis and y-axis names
+#-----------------
 
 #######################################
 # 13. Do the same as number 12, but add
@@ -181,8 +235,11 @@ plot(moz$year, moz$lifeExp)
 #     Also change the color of the line (col)
 #######################################
 
-plot(moz$year, moz$lifeExp,type = 'l', main= "R mola", xlab="edad", ylab="año", col="purple")
+plot(moz$year, moz$lifeExp,type = 'l', main= "R mola", xlab="edad", ylab="aÃ±o", col="purple")
 
+#-----------------
+# COMENTARIO DE LUCIA:  perfect. I know que mola mucho!
+#-----------------
 
 
 #######################################
@@ -190,6 +247,11 @@ plot(moz$year, moz$lifeExp,type = 'l', main= "R mola", xlab="edad", ylab="año", 
 #######################################
 
 plot(moz$year, moz$pop)
+#-----------------
+# COMENTARIO DE LUCIA:  perfect, but try to always give three 
+## elements to the graph: title, x-axis and y-axis names
+#-----------------
+
 
 #######################################
 # 15. When you are done with this exercise, 
